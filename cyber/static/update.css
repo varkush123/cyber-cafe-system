@@ -1,0 +1,155 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background{
+    padding:0px;
+    width:100%;
+    height: 120vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(https://img.freepik.com/free-vector/gradient-connection-background_23-2150518083.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1711756800&semt=ais);
+    background-size:cover;
+    background-position: center;
+}
+
+.manu{
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 60px;
+}
+.manu ul{
+    list-style-type: none;
+    line-height: 50px;
+}
+.manu ul li{
+    display: inline;
+}
+
+.manu ul li a{
+    color:white;
+    font-size: 23px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+.manu ul li a:visited{
+    color:white;
+    background-color: black;
+
+}
+.manu ul li a:hover{
+    color:white;
+    background-color: black;
+}
+
+.manu ul li a:active{
+    color:white;
+    background-color: black;
+}
+
+.container{
+    width: 100%;
+    max-width: 650px;
+    background: rgba(0,0,0,0.5);
+    padding:20px ;
+    margin: 0 350px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px 2px white;
+    justify-content: center;   
+    align-items: center; 
+    align-content: center;
+
+}
+
+.form-title{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 5px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: solid 1px white;
+
+}
+
+.main-user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+
+}
+
+.user-input-box:nth-child(2n){
+    justify-content: end;
+}
+
+.user-input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 10px;
+}
+
+.user-input-box label{
+    width: 95%;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 5px 0;
+
+}
+
+.user-input-box input{
+    height: 35px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+.form-submit-btn input{
+    cursor:pointer;
+
+}
+
+.form-submit-btn{
+    margin-top: 13px;
+}
+
+.form-submit-btn input{
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    font-size: 18px;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(209, 209, 209);
+    background: rgba(63,114,76,0.7);
+}
+
+.form-submit-btn input:hover{
+    background: rgba(56,204,93,0.7);
+    color: rgb(255,255,255);
+}
+
+.messages {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}

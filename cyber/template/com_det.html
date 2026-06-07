@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyber cafe management system</title>
+    <link rel="stylesheet" href="{% static 'comdet.css'%}">
+</head>
+<body>
+    <div class ="background">
+        <div class="manu">
+             <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="addcus.html">Customer Management</a></li>
+                    <li><a href="addcom.html">Computer Management</a></li>
+                    <li><a href="home.html">Logout</a></li>
+             </ul>
+            
+        </div>
+        <div class="slogan">
+            <H2>Computer Details / Billing
+            </H2>
+        </div>
+    <div class="wrap">  
+        <form action="#" method="post">
+            {% csrf_token %}
+            <div class="user-input-box">
+                <label for="computer_id">Enter ID Number:</label>
+                <input type="text" id="computer_id" name="computer_id" placeholder="ID Number"/>
+            </div>
+            <div class="form-submit-btn">
+                <input type="submit" value="View Computer Details">
+            </div>
+        </form>
+        
+        {% if computer_details %}
+            <div class="computer-details-container" >
+                <h2>Computer Details</h2>
+                <p>Computer ID: {{ computer_details.computer_id }}</p>
+                <p>Computer name: {{ computer_details.computer_name }}</p>
+                <p>Computer company: {{ computer_details.company }}</p>
+                <p>Computer Type: {{ computer_details.type }}</p>
+                <p>Model Number: {{ computer_details.model_no }}</p>
+                <p>Computer Series: {{ computer_details.series }}</p>
+                <p>computer RAM: {{ computer_details.ram }}</p>
+                
+                
+            </div>
+        {% endif %}
+    </div>      
+    </div>
+</body>
+</html>

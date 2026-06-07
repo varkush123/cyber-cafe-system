@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyber cafe management system</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <style>
+        /* Style for the blinking message */
+        .blink-message {
+            animation: blink 50s infinite alternate;
+            color: white;
+        }
+
+        @keyframes blink {
+            from {
+                opacity: 2;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class ="background">
+        <div class="Cyber">
+            <H1>𝓬𝔂𝓫𝓮𝓻 𝓬𝓪𝓯𝓮 </H1>
+    
+        </div>
+        <div class="manu">
+             <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+             </ul>
+            
+        </div>
+    
+    <section class="contactus">
+        <div class="content3">
+            <H2>𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐔𝐬</H2>
+            <p>We'd Love to Hear From You</p>
+
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <H3>Address</H3>
+                        <p>3721 saket nagar,<br>kanpur,utter pradesh,<br>20857</p>
+                    </div>
+                        
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone"></i></div>
+                    <div class="text">
+                        <H3>Phone no</H3>
+                        <p>540-654-4098</p>
+                    </div>
+                        
+
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <H3>Email</H3>
+                        <p>wtye3jkr@temp-mail.net</p>
+                    </div>
+                        
+                </div>
+
+            </div>
+            <div class="contactForm">
+                <form>
+                    <H2>Send Message</H2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type your Message....</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="send">
+                    </div>
+                    <div id="messageContainer"></div>
+                     
+                </form>
+            </div>
+
+        </div>
+
+
+    </section>
+    </div> 
+    {% if show_message_script %}
+    <script>
+        document.addEventListener('submit', function() {
+        //document.getElementById('contactForm').addEventListener('submit', function(event) {
+            //event.preventDefault(); // Prevent form submission
+            
+            // Show the message
+            var messageContainer = document.getElementById('messageContainer');
+            messageContainer.innerHTML = '<p class="blink-message">Your message has been sent successfully!</p>';
+            messageContainer.classList.add('show'); 
+            // After 3 seconds, remove the message
+            setTimeout(function() {
+                messageContainer.innerHTML = '';
+                messageContainer.classList.remove('show');
+            }, 100000);
+        });
+    </script>
+    {% endif %}
+</body>
+</html>

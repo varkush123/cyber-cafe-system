@@ -1,0 +1,129 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    margin:0px;
+    padding:0px;
+    justify-content: center;
+    align-items: center;
+
+}
+.background{
+    padding: 0%;
+    width:100%;
+    height: 120vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(https://us.123rf.com/450wm/parilovv/parilovv2009/parilovv200902332/156035543-professional-gamers-cafe-room-with-powerful-personal-computer-game-chair-blue-color-concept-cyber.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+.manu{
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.manu ul{
+    list-style-type: none;
+    line-height: 45px;
+}
+.manu ul li{
+    display: inline;
+}
+
+.manu ul li a{
+    color:white;
+    font-size: 20px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+.manu ul li a:visited{
+    color:white;
+    background-color: black;
+
+}
+.manu ul li a:hover{
+    color:white;
+    background-color: black;
+}
+.manu ul li a:active{
+    color:white;
+    background-color: black;
+}
+
+.slogan{
+    width:100%;
+    height:45px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.slogan h2{
+    font-size: 45px;
+    text-align: center;
+    line-height: 40px;
+    color:rgb(0, 0, 0);
+}
+
+.container {
+    max-width: 500px;
+    margin: 55px auto;
+    padding: 20px;
+    border: 1px solid #56d8ff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+label {
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 5px 0;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00a2ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.customer-details-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.customer-details-container th {
+    background-color: #f2f2f2;
+    padding: 10px; /* Add padding to create space */
+    text-align: left;
+}
+
+.customer-details-container td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    color: #fff;
+}

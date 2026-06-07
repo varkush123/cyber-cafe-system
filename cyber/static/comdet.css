@@ -1,0 +1,180 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    margin:0px;
+    padding:0px;
+    justify-content: center;
+    align-items: center;
+
+}
+.background{
+    padding: 0%;
+    width:100%;
+    height: 120vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(https://us.123rf.com/450wm/parilovv/parilovv2009/parilovv200902332/156035543-professional-gamers-cafe-room-with-powerful-personal-computer-game-chair-blue-color-concept-cyber.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+.manu{
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.manu ul{
+    list-style-type: none;
+    line-height: 45px;
+}
+.manu ul li{
+    display: inline;
+}
+
+.manu ul li a{
+    color:white;
+    font-size: 20px;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+.manu ul li a:visited{
+    color:white;
+    background-color: black;
+
+}
+.manu ul li a:hover{
+    color:white;
+    background-color: black;
+}
+.manu ul li a:active{
+    color:white;
+    background-color: black;
+}
+
+.slogan{
+    width:100%;
+    height:45px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.slogan h2{
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    color:rgb(0, 0, 0);
+}
+
+.wrap{
+
+    /*background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 40px 30px 20px;
+    background-position: center;*/
+    width: 120%;
+    max-width: 650px;
+    background: rgba(0,0,0,0.5);
+    padding:20px ;
+    margin: 15px 350px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px 2px white;
+    justify-content: center;   
+    align-items: center; 
+    align-content: center;
+
+}
+
+.user-input-box{
+    /*position: relative;
+    width: 20%;
+    height: 50%;
+    margin: 30px 0;*/
+    display: flex;
+    flex-direction: column;
+    padding: 10px 90px;
+    width: 60%;
+    padding-bottom: 10px;
+    align-items: center;
+    margin-left: 100px;
+
+}
+
+.user-input-box label{
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+    margin-left: 20px;
+
+}
+
+.user-input-box input{
+    height: 35px;
+    width: 160%;
+    border-radius: 7px;
+    outline: none;
+    border: 3px solid grey;
+    padding: 0 90px;
+    margin-top: 10px;
+}
+
+.form-submit-btn input{
+    cursor:pointer;
+
+}
+.form-submit-btn{
+    margin-top: 13px;
+    margin-left: 199px;
+    margin-bottom: 10px;
+}
+
+form-submit-btn input{
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    font-size: 18px;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(209, 209, 209);
+    background: rgba(91, 206, 252, 0.7);
+}
+
+.form-submit-btn input:hover{
+    background: rgba(3, 11, 133, 0.7);
+    color: rgb(255,255,255);
+}
+
+.computer-details-container {
+    background-color: #f9f9f9b2;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.computer-details-container h2 {
+    font-size: 24px;
+    color: #07058db9;
+    margin-bottom: 5px;
+    margin-left: 140px;
+}
+
+.computer-details-container p {
+    margin-bottom: 5px;
+    margin-left: 140px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}

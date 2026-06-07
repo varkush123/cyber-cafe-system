@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyber cafe management system</title>
+    <link rel="stylesheet" href="{% static 'cusdet.css'%}">
+</head>
+<body>
+    <div class ="background">
+        <div class="manu">
+             <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="addcus.html">Customer Management</a></li>
+                    <li><a href="addcom.html">Computer Management</a></li>
+                    <li><a href="home.html">Logout</a></li>
+             </ul>
+            
+        </div>
+        <div class="slogan">
+            <H2>𝐂𝐮𝐬𝐭𝐨𝐦𝐞𝐫 𝐃𝐞𝐭𝐚𝐢𝐥𝐬
+            </H2>
+        </div>
+        <div class="wrap">  
+            <form action="#" method="post">
+                {% csrf_token %}
+                <div class="user-input-box">
+                    <label for="id_no">Enter ID Number:</label>
+                    <input type="text" id="id_no" name="id_no" placeholder="ID Number"/>
+                </div>
+                <div class="form-submit-btn">
+                    <input type="submit" value="View Customer Details">
+                </div>
+            </form>
+        
+        
+            {% if customer_details %}
+            <div class="customer-details-container">
+                <h2>Customer Details</h2>
+                <p>ID Type: {{ customer_details.id_type }}</p>
+                <p>ID Number: {{ customer_details.id_no }}</p>
+                <p>Customer Name: {{ customer_details.name }}</p>
+                <p>Age: {{ customer_details.age }}</p>
+                <p>Mobile Number: {{ customer_details.mobile_no }}</p>
+                <p>Email ID: {{ customer_details.email }}</p>
+                <p>Address: {{ customer_details.address }}</p>
+                <p>Datetime: {{ customer_details.check_in_datetime }}</p>
+                <p>Time Spend: {{ customer_details.time_spend_minutes }}</p>
+                <p>Computer ID: {{ customer_details.computer_id }}</p>
+                
+                
+            </div>
+            
+                
+            {% endif %}
+               
+        </div>      
+    </div>
+</body>
+</html>

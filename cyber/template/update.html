@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyber cafe management system</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'update.css'%}">
+</head>
+<body>
+    <div class ="background">
+        <div class="manu">
+             <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="addcus.html">Customer Management</a></li>
+                    <li><a href="addcom.html">Computer Management</a></li>
+                    <li><a href="home.html">Logout</a></li>
+             </ul>
+            
+        </div>
+    {% block content %}    
+    <div class="container">
+        <h1 class="form-title">Update Customer Records</h1>
+        <form action="{% url 'update_customer_by_id' %}" method="post">
+            {% csrf_token %}
+
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="id_type">ID Type:</label>
+                    <input type="text" id="id_type" name="id_type" placeholder="ID Type" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="id_no">ID Number:</label>
+                    <input type="text" id="id_no" name="id_no" placeholder="ID Number" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="name">Customer Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Customer Name" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age" placeholder="Age" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="mobile_no">Mobile Number:</label>
+                    <input type="text" id="mobile_no" name="mobile_no" placeholder="Mobile Number" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="email">Email ID:</label>
+                    <input type="text" id="email" name="email" placeholder="Email ID" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Address" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="check_in_datetime">Datetime:</label>
+                    <input type="text" id="check_in_datetime" name="check_in_datetime" placeholder="Datetime" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="time_spend_minutes">Time Spend:</label>
+                    <input type="text" id="time_spend_minutes" name="time_spend_minutes" placeholder="Time Spend" required>
+                </div>
+                <div class="user-input-box">
+                    <label for="computer_id">Computer ID:</label>
+                    <input type="text" id="computer_id" name="computer_id" placeholder="Computer ID" required>
+                </div>
+            </div>
+            <div class="form-submit-btn">
+                <input type="submit" value="Update">
+            </div>
+          
+        </form>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li class="{{ message.tags }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    </div> 
+    {% endblock %}   
+    </div>
+    <script>
+        // Function to make error message blink
+        function blinkErrorMessage() {
+            var errorMessage = document.querySelector('.messages li');
+            errorMessage.classList.add('blink');
+    
+            setTimeout(function() {
+                errorMessage.classList.remove('blink');
+            }, 5000); // Blink for 5 seconds
+        }
+    
+        // Call blinkErrorMessage function after page load
+        window.onload = function() {
+            blinkErrorMessage();
+        };
+    </script>
+    
+</body>
+</html>

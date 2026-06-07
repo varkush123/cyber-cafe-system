@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyber cafe management system</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'addcom.css'%}">
+</head>
+<body>
+    <div class ="background">
+        <div class="manu">
+             <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="addcus.html">Customer Management</a></li>
+                    <li><a href="addcom.html">Computer Management</a></li>
+                    <li><a href="home.html">Logout</a></li>
+             </ul>
+            
+        </div>
+    
+    <div class="computer">
+        <h1 class="form-title">Add Computer Records</h1>
+        <form action="#" method="post">
+            {% csrf_token %}
+            <div class="com-fec-info">
+                <div class="comp-input-box">
+                    <label for="computer_id">Computer ID:</label>
+                    <input type="text" id="computer_id" name="computer_id" placeholder="Computer ID" required>
+                </div>
+                <div class="comp-input-box">
+                    <label for="computer_name">Computer Name:</label>
+                    <input type="text" id="computer_name" name="computer_name" placeholder="Computer Name" required>
+                </div>
+                <div class="comp-input-box">
+                    <label for="company">Computer Company:</label>
+                    <input type="text" id="company" name="company" placeholder="Computer Company" required>
+                </div>
+                <div class="comp-input-box">
+                    <label for="type">Computer Type:</label>
+                    <input type="text" id="type" name="type" placeholder="Computer Type" required>
+                </div>
+                <div class="comp-input-box">
+                    <label for="model_no">Model Number:</label>
+                    <input type="text" id="model_no" name="model_no" placeholder="Model Number"required>
+                </div>
+                <div class="comp-input-box">
+                    <label for="series">Computer Series:</label>
+                    <input type="text" id="series" name="series" placeholder="Computer Series" required>
+                </div>
+                <div class="comp-input-box">
+                    <label for="ram">Computer RAM:</label>
+                    <input type="text" id="ram" name="ram" placeholder="Computer RAM" required>
+                </div>
+            </div>
+            <div class="form-submit-btn">
+                <input type="submit" value="Save Computer">
+            </div>
+    
+        </form>
+    
+    </div>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <link rel="stylesheet" href="{% static 'billing.css' %}">
+</head>
+<body>
+    <div class ="background">
+        <div class="manu">
+             <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="addcus.html">Customer Management</a></li>
+                    <li><a href="addcom.html">Computer Management</a></li>
+                    <li><a href="home.html">Logout</a></li>
+             </ul>
+            
+        </div>
+        <div class="slogan">
+            <H2> Billing Records
+            </H2>
+        </div>
+        <div class="container">
+            <form action="{% url 'calculate_billing' %}" method="post">
+                {% csrf_token %}
+                <label for="id_no">Customer ID:</label>
+                <input type="text" id="id_no" name="id_no" required><br><br>
+                <button type="submit">Generate Bill</button>
+            
+            </form>
+        <div class="customer-details-container">    
+            <table>
+                <tr>
+                    <th>ID No</th>
+                    <th>Time Spend (minutes)</th>
+                    <th>Total Billing</th>
+                </tr>
+                <tr>
+                    <td>{{ id_no }}</td>
+                    <td>{{ time_spend_minutes }}</td>
+                    <td>{{ total_billing }}</td>
+                </tr>
+            </table>
+        </div>
+    
+        </div>
+    </div>
+</body>
+</html>
